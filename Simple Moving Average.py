@@ -4,9 +4,9 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 from alpha_vantage.timeseries import TimeSeries #This class used to retrieve stock market data
 
-api = ''
+api = '' #API key goes here
 time = TimeSeries(key = api, output_format = 'pandas')
-ticker = 'AMZN'
+ticker = 'AMZN' #can be changed to any stock on the market
 
 data, meta_data = time.get_daily(symbol = ticker, outputsize = 'full') #meta_data stores the headers and non useful information
 n = 20 #number of days used for the window
