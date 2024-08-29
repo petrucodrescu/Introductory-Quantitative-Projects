@@ -17,7 +17,6 @@ def var_calc(data, confidence_level = 0.95):
     var = np.percentile(returns, (1 - confidence_level) * 100)
     return var
 
-
 def calculate_and_display_var():
     ticker = ticker_entry.get()
 
@@ -31,8 +30,6 @@ def calculate_and_display_var():
     else:
         messagebox.showwarning("Error", "Please input a valid ticker.")
 
-
-# Set up Tkinter interface
 def gui():
     root = tk.Tk()
     root.title("VaR Calculator")
