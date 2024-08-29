@@ -24,7 +24,7 @@ def calculate_and_display_var():
         try:
             stockdata = get_data(ticker)
             VaR = var_calc(stockdata)
-            result_label.config(text=f"VaR (95% confidence level): {VaR:.4%}")
+            result_label.config(text = f"VaR (95% confidence level): {VaR:.4%}")
         except Exception as e:
             messagebox.showerror("Error", f"An error occurred: {e}")
     else:
@@ -34,18 +34,18 @@ def gui():
     root = tk.Tk()
     root.title("VaR Calculator")
 
-    tk.Label(root, text="Enter Ticker:").pack(pady=10)
+    tk.Label(root, text="Enter Ticker:").pack(pady = 10)
 
     global ticker_entry
     ticker_entry = tk.Entry(root)
     ticker_entry.pack(pady=5)
 
-    calculate_button = tk.Button(root, text="Calculate VaR", command=calculate_and_display_var)
-    calculate_button.pack(pady=20)
+    calculate_button = tk.Button(root, text="Calculate VaR", command = calculate_and_display_var)
+    calculate_button.pack(pady = 20)
 
     global result_label
-    result_label = tk.Label(root, text="")
-    result_label.pack(pady=10)
+    result_label = tk.Label(root, text = "")
+    result_label.pack(pady = 10)
 
     root.mainloop()
 
