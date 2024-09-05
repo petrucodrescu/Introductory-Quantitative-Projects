@@ -1,3 +1,6 @@
+#Work in Progress
+
+
 #This code was originally written in a jupyter notebook
 %pip install alpha_vantage scikit-learn
 import pandas as pd
