@@ -9,7 +9,7 @@ api = '' #API key goes here
 time = TimeSeries(key = api, output_format = 'pandas')
 ticker = 'AMZN' #can be changed to any stock on the market
 
-data, meta_data = time.get_daily(symbol = ticker, outputsize = 'full') #meta_data stores the headers and non useful information
+data, meta_data = time.get_daily(symbol = ticker, outputsize = 'full') #meta_data stores non useful information
 n = 20 #number of days used for the window
 
 data['SMA'] = data['4. close'].rolling(window = n).mean()
